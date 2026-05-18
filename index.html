@@ -144,28 +144,32 @@ style="background:#05142d; z-index:99999;">
 
 </div>
 <!-- Spinner End -->
-
 <!-- Header Start -->
 <div class="container-fluid p-0" id="home">
 
-<nav class="navbar navbar-expand-lg navbar-dark px-lg-5"
-style="background:#05142d !important;">
+    <nav class="navbar navbar-expand-lg navbar-dark px-lg-5"
+        style="background:#05142d !important;">
 
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+        <a href="index.html"
+            class="navbar-brand"
+            style="padding:0; margin:0; display:flex; align-items:center;">
 
-            <img 
-            src="logo.png"
-            alt="MEFODI Logo">
-
+            <img src="logo.png"
+                alt="MEFODI Logo"
+                style="
+                width:230px;
+                max-width:100%;
+                height:auto;
+                object-fit:contain;
+                display:block;">
         </a>
 
         <button type="button"
-        class="navbar-toggler me-4"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse">
+            class="navbar-toggler me-4"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
 
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -173,129 +177,129 @@ style="background:#05142d !important;">
             <div class="navbar-nav mx-auto p-4 p-lg-0">
 
                 <a href="#home" class="nav-item nav-link active">Home</a>
-
                 <a href="#about" class="nav-item nav-link">About</a>
-
                 <a href="#services" class="nav-item nav-link">Services</a>
-
                 <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-
                 <a href="#why-us" class="nav-item nav-link">Why Choose Us</a>
-
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
 
             </div>
 
-            <a class="btn btn-primary d-none d-lg-flex px-4"
-            href="contact.html">
+            <a class="btn d-none d-lg-flex"
+                href="#contact"
+                style="background:#c96a00; color:white; border:none;">
 
                 Get In Touch
-
             </a>
 
         </div>
+    </nav>
 
-</nav>
+    <!-- CAROUSEL -->
+    <div id="header-carousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel">
 
-<div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
 
-<div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
 
-<div class="carousel-item active">
+                <div class="header-image-wrapper">
 
-<img class="w-100"
-src="header1.jpg"
-alt="MEFODI SIGN LLC"
-style="height:100vh; object-fit:cover;">
+                    <img class="header-image"
+                        src="header1.jpg"
+                        alt="MEFODI SIGN LLC">
 
-<div class="carousel-caption">
+                </div>
 
-<div class="row h-100 align-items-center justify-content-center">
+                <div class="carousel-caption">
 
-<div class="col-10 col-md-8 text-center">
+                    <div class="row h-100 align-items-center justify-content-center">
 
-<h1 class="display-1 text-white animated slideInDown">
+                        <div class="col-11 col-md-9 text-center">
 
-Powerful Signs That Build Brand Identity
+                            <h1 class="display-3 text-white animated slideInDown">
+                                Powerful Signs That Build Brand Identity
+                            </h1>
 
-</h1>
+                            <p class="fs-4 mb-4 text-white animated slideInDown">
+                                Premium 3D Signs, Neon Flex & Professional Signage Solutions
+                            </p>
 
-<p class="fs-3 mb-5 text-white animated slideInDown">
+                            <a href="#services"
+                                class="btn py-3 px-5 text-white"
+                                style="background:#c96a00; border:none;">
 
-Premium 3D Signs, Neon Flex & Professional Signage Solutions
+                                Our Services
+                            </a>
 
-</p>
+                        </div>
 
-<a href="#services"
-class="btn btn-primary py-3 px-5 animated slideInDown">
+                    </div>
 
-Our Services
+                </div>
+            </div>
 
-</a>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
 
-</div>
-</div>
-</div>
-</div>
+                <div class="header-image-wrapper">
 
-<div class="carousel-item">
+                    <img class="header-image"
+                        src="header2.jpg"
+                        alt="MEFODI SIGN LLC">
 
-<img class="w-100"
-src="header2.jpg"
-alt="MEFODI SIGN LLC"
-style="height:100vh; object-fit:cover;">
+                </div>
 
-<div class="carousel-caption">
+                <div class="carousel-caption">
 
-<div class="row h-100 align-items-center justify-content-center">
+                    <div class="row h-100 align-items-center justify-content-center">
 
-<div class="col-10 col-md-8 text-center">
+                        <div class="col-11 col-md-9 text-center">
 
-<h1 class="display-1 text-white animated slideInDown">
+                            <h1 class="display-3 text-white animated slideInDown">
+                                Transforming Concepts Into Durable Structures
+                            </h1>
 
-Transforming Concepts Into Durable Structures
+                            <p class="fs-4 mb-4 text-white animated slideInDown">
+                                Laser Precision, Modern Design & Innovative Fabrication
+                            </p>
 
-</h1>
+                            <a href="#portfolio"
+                                class="btn py-3 px-5 text-white"
+                                style="background:#c96a00; border:none;">
 
-<p class="fs-3 mb-5 text-white animated slideInDown">
+                                View Portfolio
+                            </a>
 
-Laser Precision, Modern Design & Innovative Fabrication
+                        </div>
 
-</p>
+                    </div>
 
-<a href="#portfolio"
-class="btn btn-primary py-3 px-5 animated slideInDown">
+                </div>
+            </div>
 
-View Portfolio
+        </div>
 
-</a>
+        <!-- Buttons -->
+        <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="prev">
 
-</div>
-</div>
-</div>
-</div>
+            <span class="carousel-control-prev-icon"></span>
+        </button>
 
-</div>
+        <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="next">
 
-<button class="carousel-control-prev"
-type="button"
-data-bs-target="#header-carousel"
-data-bs-slide="prev">
+            <span class="carousel-control-next-icon"></span>
+        </button>
 
-<span class="carousel-control-prev-icon"></span>
-
-</button>
-
-<button class="carousel-control-next"
-type="button"
-data-bs-target="#header-carousel"
-data-bs-slide="next">
-
-<span class="carousel-control-next-icon"></span>
-
-</button>
-
-</div>
+    </div>
 
 </div>
 <!-- Header End -->
