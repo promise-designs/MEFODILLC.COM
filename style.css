@@ -569,3 +569,36 @@
         width:170px !important;
     }
 }
+
+/* REMOVE WEIRD GAP UNDER HEADER */
+
+#header-carousel,
+#header-carousel .carousel-inner,
+#header-carousel .carousel-item{
+    margin:0 !important;
+    padding:0 !important;
+    line-height:0;
+}
+
+.carousel-caption{
+    bottom:0 !important;
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+
+.header-image-wrapper{
+    margin-bottom:0 !important;
+}
+
+/* remove hidden white space */
+#about{
+    margin-top:0 !important;
+    padding-top:70px !important;
+    position:relative;
+    z-index:2;
+}
+
+/* fixes bootstrap image spacing */
+.header-image{
+    vertical-align:middle;
+}
