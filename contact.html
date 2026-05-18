@@ -187,6 +187,38 @@
                 font-size: 2.5rem;
             }
         }
+.contact-form-box{
+    background:#ffffff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form-box input,
+.contact-form-box textarea{
+    width:100%;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    margin-bottom:20px;
+    background:#fff;
+    color:#071a35;
+    font-size:16px;
+}
+
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder{
+    color:#777;
+}
+
+.contact-form-box button{
+    background:#c96a00;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:600;
+}
     </style>
 </head>
 
@@ -286,7 +318,7 @@ echo $error;
     <button type="submit" class="btn btn-primary">
         Send Message
     </button>
-
+<div class="contact-form-box">
 </form>
 </div>
                 </div>
