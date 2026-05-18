@@ -510,3 +510,62 @@
     --light-orange: #ffb347;
     --white: #ffffff;
 }
+/* ===== HEADER FIX ===== */
+
+.header-image-wrapper{
+    width:100%;
+    height:100vh;
+    min-height:500px;
+    max-height:850px;
+    overflow:hidden;
+    position:relative;
+    background:#05142d;
+}
+
+.header-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+}
+
+/* Dark overlay */
+.header-image-wrapper::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+/* Caption */
+.carousel-caption{
+    z-index:5;
+    bottom:0;
+    top:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .header-image-wrapper{
+        height:70vh;
+        min-height:420px;
+    }
+
+    .carousel-caption h1{
+        font-size:2rem !important;
+        line-height:1.2;
+    }
+
+    .carousel-caption p{
+        font-size:1rem !important;
+    }
+
+    .navbar-brand img{
+        width:170px !important;
+    }
+}
