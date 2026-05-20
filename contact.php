@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = htmlspecialchars($_POST['subject']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "melatasign@gmail.com"; // CHANGE THIS
+    $to = "abalekepromise1@gmail.com"; // CHANGE THIS
 
     $mail_subject = "New Contact Form Message";
 
