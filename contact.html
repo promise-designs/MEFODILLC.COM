@@ -236,11 +236,23 @@
     padding:20px;
 
 }
-.contact-form-box input::placeholder,
-.contact-form-box textarea::placeholder{
-    color:#d46f00;
+.contact-form input,
+.contact-form textarea{
+
+    background:#102347 !important;
+    color:#ffffff !important;
+    border:2px solid #163b73 !important;
+
 }
-.contact-info-box h2,
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#ff9800 !important;
+    opacity:1;
+
+}
+        .contact-info-box h2,
 .contact-text h1{
 
     color:#fff;
@@ -338,14 +350,25 @@ style="background:#05142d !important;">
 
 </section>
     <!-- Contact Section -->
-    <section class="contact-section" style="background:#f5f7fb;">
+    <section class="contact-section" style="
+background:#041633;
+padding:80px 0;
+color:#ffffff;
+">
         <div class="container">
             <div class="row g-5">
 
 
                         <div class="col-lg-7">
     <div class="contact-form-box">
-                        <h2 class="mb-4">Send Us a Message</h2>
+                        <h2 style="
+color:#ffffff;
+font-size:45px;
+font-weight:700;
+margin-bottom:30px;
+">
+Send Us a Message
+                        </h2>
 <?php
 echo $success;
 echo $error;
