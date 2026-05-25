@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact | MEFODI SIGN LLC</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff7a00;
+            --dark-blue: #05142d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .navbar {
+            background: var(--dark-blue);
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: var(--primary) !important;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(5, 20, 45, 0.8), rgba(5, 20, 45, 0.8)), url('img/carousel-1.jpg') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+        /* HERO VIDEO */
+.hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 20, 45, 0.75);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+        
+        .contact-section {
+            padding: 100px 0;
+        }
+
+        .contact-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0,0,0,.08);
+        }
+
+        .form-control {
+            height: 55px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        textarea.form-control {
+            height: 160px;
+            resize: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            border: none;
+            padding: 14px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #e46d00;
+        }
+
+        .info-card {
+            background: var(--dark-blue);
+            color: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            height: 100%;
+        }
+
+        .info-card i {
+            color: var(--primary);
+            margin-right: 15px;
+        }
+
+        .gallery {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: .4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .footer {
+            background: var(--dark-blue);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+.contact-form-box{
+    background:#ffffff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form-box input,
+.contact-form-box textarea{
+    width:100%;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    margin-bottom:20px;
+    background:#fff;
+    color:#071a35;
+    font-size:16px;
+}
+
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder{
+    color:#777;
+}
+
+.contact-form-box button{
+    background:#c96a00;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:600;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-lg-5"
+style="background:#05142d !important;">
+        <div class="container">
+<a href="index.html" class="navbar-brand" style="padding:0; margin:0; display:flex; align-items:center; height:80px; overflow:hidden;">
+    
+    <img 
+        src="logo.png" 
+        alt="MEFODI Logo"
+        style="height:180px; width:auto; max-width:450px; object-fit:contain; display:block;"
+    >
+
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- PUT THIS INSIDE YOUR HERO SECTION -->
+<!-- REPLACE THE CURRENT HERO BACKGROUND -->
+
+<section class="hero">
+
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <h1>Contact Us</h1>
+        <p>Let’s discuss your next signage and branding project</p>
+    </div>
+
+</section>
+    <!-- Contact Section -->
+    <section class="contact-section" style="background:#f5f7fb;">
+        <div class="container">
+            <div class="row g-5">
+
+
+                        <div class="col-lg-7">
+    <div class="contact-form-box">
+                        <h2 class="mb-4">Send Us a Message</h2>
+<?php
+echo $success;
+echo $error;
+?>
+<form action="contact.php" method="POST">
+
+    <input type="text" 
+        name="name"
+        class="form-control" 
+        placeholder="Your Name"
+        required>
+
+    <input type="email" 
+        name="email"
+        class="form-control" 
+        placeholder="Your Email"
+        required>
+
+    <input type="text" 
+        name="phone"
+        class="form-control" 
+        placeholder="Phone Number"
+        required>
+
+    <input type="text" 
+        name="subject"
+        class="form-control" 
+        placeholder="Subject"
+        required>
+
+    <textarea 
+        name="message"
+        class="form-control" 
+        placeholder="Your Message"
+        required></textarea>
+
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
+</form>
+</div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="info-card">
+
+                        <h2 class="mb-4">Get In Touch</h2>
+
+                        <p class="mb-4">
+                            MEFODI SIGN LLC specializes in premium signage solutions, Neon Flex, 3D signs and branding structures.
+                        </p>
+
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            9276 pear butte drive, Texas, U.S.A
+                        </p>
+
+                        <p>
+                            <i class="fas fa-phone-alt"></i>
+                            +237 6 20 89 69 91
+                        </p>
+
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            melatasign@gmail.com
+                        </p>
+
+                        <p>
+                            <i class="fab fa-whatsapp"></i>
+                            +237 6 20 89 69 91
+                        </p>
+
+                        <img src="work.jpg" class="img-fluid rounded mt-4" alt="Work Image">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" style="background:#f5f7fb;">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2>Recent Projects</h2>
+                <p>Modern signage and branding solutions by MEFODI SIGN LLC</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <img src="gallery1.jpg" alt="Project">
+                </div>
+
+                <div class="col-md-4">
+                    <img src="gallery2.jpg" alt="Project">
+                </div>
+
+                <div class="col-md-4">
+                    <img src="gallery3.jpg" alt="Project">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3 class="mb-3">MEFODI SIGN LLC</h3>
+            <p>
+                Professional Signage • Neon Flex • 3D Signs • Branding Solutions
+            </p>
+            <p class="mb-0">
+                &copy; 2026 MEFODI SIGN LLC. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            alert('Your message has been received. We will contact you soon.');
+
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>
