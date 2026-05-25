@@ -127,6 +127,21 @@
         margin-right: 0;
         padding: 10px 0;
     }
+    .category-card img{
+    height:180px;
+}
+
+.process-box{
+    padding:25px 15px;
+}
+
+.whatsapp-float{
+    width:50px;
+    height:50px;
+    font-size:24px;
+    right:15px;
+    bottom:15px;
+}
 
     .navbar .navbar-nav {
         margin-top: 8px;
@@ -279,6 +294,25 @@
     font-weight: 500;
     letter-spacing: 0.5px;
 }
+.room-item .room-detail .position-absolute{
+.category-card{
+    background:#0c1d3d;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 0 25px rgba(0,0,0,.2);
+    height:100%;
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+}
+
+.category-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
 
 .room-item .small {
     font-size: 12px;
@@ -363,9 +397,8 @@
 }
 
 .feature {
-    background: #f8f9fa;
+    background: transparent !important;
 }
-
 .feature h5 {
     font-weight: 600;
 }
@@ -588,4 +621,38 @@
 #about{
     margin-top:0 !important;
     padding-top:70px !important;
+}
+.process-box{
+    background:#0c1d3d;
+    padding:35px 20px;
+    border-radius:15px;
+    transition:.4s;
+    color:white;
+    border:1px solid rgba(212,111,0,.2);
+}
+
+.process-box i{
+    color:#d46f00;
+}
+
+.process-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,0,0,.25);
+}
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    z-index:999;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
 }
