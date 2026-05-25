@@ -632,7 +632,27 @@
 }
 
 .process-box i{
-    color:#d46f00;
+
+    color:#ff8c00 !important;
+    font-size:55px;
+    margin-bottom:20px;
+    display:block;
+    opacity:1 !important;
+
+}
+
+.process-box h5{
+
+    color:#ffffff;
+    font-weight:700;
+    margin-top:15px;
+
+}
+
+.process-box p{
+
+    color:#d7d7d7;
+
 }
 
 .process-box:hover{
