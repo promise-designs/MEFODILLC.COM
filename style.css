@@ -131,9 +131,30 @@
     height:180px;
 }
 
-.process-box{
-    padding:25px 15px;
+            .process-box i{
+
+    color:#ff8c00 !important;
+    font-size:55px;
+    margin-bottom:20px;
+    display:block;
+    opacity:1 !important;
+
 }
+
+.process-box h5{
+
+    color:#ffffff;
+    font-weight:700;
+    margin-top:15px;
+
+}
+
+.process-box p{
+
+    color:#d7d7d7;
+
+}
+
 
 .whatsapp-float{
     width:50px;
