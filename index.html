@@ -2105,7 +2105,7 @@ target="_blank">
 
             <img
             id="popupImage"
-            src="header1.jpg"
+            src="pop1.jpg"
             alt="Gallery">
 
         </div>
@@ -2116,7 +2116,7 @@ target="_blank">
         Send us your project details and get a fast quote.
         </p>
 
-        <form action="contact.php"
+        <form id="popupForm" action="contact.php"
 method="POST">
 
             <input
@@ -2142,68 +2142,131 @@ method="POST">
     </div>
 
     </div>
-    <script>
+    
+<script>
+// ================= POPUP OPEN AFTER 1 MINUTES =================
 
-const popup =
-document.getElementById("popupForm");
+setTimeout(() => {
 
-const closeBtn =
-document.querySelector(".close-popup");
+document.getElementById("popupOverlay").style.display = "flex";
 
-setInterval(()=>{
-
-    popup.style.display = "flex";
-
-}, 90000);
+}, 75000);
 
 
 
-closeBtn.onclick = ()=>{
+// ================= CLOSE POPUP =================
 
-    popup.style.display = "none";
+function closePopup() {
 
-};
+document.getElementById("popupOverlay").style.display = "none";
 
-
-
-window.onclick = (e)=>{
-
-    if(e.target == popup){
-
-        popup.style.display = "none";
-
-    }
-
-};
+}
 
 
+
+// ================= IMAGE SLIDER =================
 
 const popupImages = [
 
 "pop1.jpg",
 "pop2.jpg",
-"pop3.jpg"
+"pop3.jpg",
 
 ];
 
-let current = 0;
+let currentImage = 0;
 
-setInterval(()=>{
+const sliderImage = document.getElementById("popupSliderImage");
 
-    current++;
+setInterval(() => {
 
-    if(current >= popupImages.length){
+currentImage++;
 
-        current = 0;
+if(currentImage >= popupImages.length){
 
-    }
+currentImage = 0;
 
-document.getElementById("popupImage")
-.src = popupImages[current];
+}
+
+sliderImage.src = popupImages[currentImage];
 
 }, 3000);
 
-    </script>
+
+
+// ================= FORM SUBMIT =================
+
+const popupForm = document.getElementById("popupForm");
+
+popupForm.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+
+
+// LOADING BUTTON 😭🔥
+
+const submitBtn = popupForm.querySelector("button");
+
+submitBtn.innerHTML = "Sending...";
+submitBtn.disabled = true;
+
+
+
+const formData = new FormData(popupForm);
+
+
+
+try{
+
+const response = await fetch("contact.php", {
+
+method: "POST",
+body: formData
+
+});
+
+
+
+const result = await response.text();
+
+
+
+// SUCCESS POPUP 😭🔥
+
+alert("Message sent successfully!");
+
+
+
+// RESET FORM 😭🔥
+
+popupForm.reset();
+
+
+
+// CLOSE POPUP 😭🔥
+
+document.getElementById("popupOverlay").style.display = "none";
+
+
+
+}catch(error){
+
+alert("Message failed. Please try again.");
+
+}
+
+
+
+// RESET BUTTON 😭🔥
+
+submitBtn.innerHTML = "Send Request";
+submitBtn.disabled = false;
+
+});
+
+</script>
+    
 </body>
 
 </html>
