@@ -115,7 +115,137 @@ body{
     }
 
 }
+.popup-overlay{
 
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.popup-box{
+
+    width:90%;
+    max-width:500px;
+
+    background:#041633;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    position:relative;
+
+    animation:popupShow 0.5s ease;
+
+}
+
+.popup-box h2{
+
+    color:#fff;
+    margin:20px 0 10px;
+
+}
+
+.popup-box p{
+
+    color:#d6d6d6;
+    margin-bottom:20px;
+
+}
+
+.popup-box input,
+.popup-box textarea{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#102347;
+
+    color:#fff;
+
+}
+
+.popup-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    background:#ff8c00;
+
+    color:#fff;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.popup-gallery img{
+
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+.close-popup{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+@keyframes popupShow{
+
+    from{
+
+        transform:scale(0.7);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
 </style>
 
 </head>
@@ -1962,6 +2092,118 @@ target="_blank">
 
    alert("Thank you for subscribing!");
 });
+    </script>
+
+    <!-- Pop-up Action -->
+    <div id="popupForm" class="popup-overlay">
+
+    <div class="popup-box">
+
+        <span class="close-popup">&times;</span>
+
+        <div class="popup-gallery">
+
+            <img
+            id="popupImage"
+            src="images/project1.jpg"
+            alt="Gallery">
+
+        </div>
+
+        <h2>Need Custom Signage?</h2>
+
+        <p>
+        Send us your project details and get a fast quote.
+        </p>
+
+        <form action="contact.php"
+method="POST"
+enctype="multipart/form-data">
+
+            <input
+            type="text"
+            placeholder="Your Name"
+            required>
+
+            <input
+            type="email"
+            placeholder="Your Email"
+            required>
+
+            <textarea
+            placeholder="Project Details">
+            </textarea>
+
+            <button type="submit">
+            Send Request
+            </button>
+
+        </form>
+
+    </div>
+
+    </div>
+    <script>
+
+const popup =
+document.getElementById("popupForm");
+
+const closeBtn =
+document.querySelector(".close-popup");
+
+setInterval(()=>{
+
+    popup.style.display = "flex";
+
+}, 180000);
+
+
+
+closeBtn.onclick = ()=>{
+
+    popup.style.display = "none";
+
+};
+
+
+
+window.onclick = (e)=>{
+
+    if(e.target == popup){
+
+        popup.style.display = "none";
+
+    }
+
+};
+
+
+
+const popupImages = [
+
+"pop1.jpg",
+"pop2.jpg",
+"pop3.jpg"
+
+];
+
+let current = 0;
+
+setInterval(()=>{
+
+    current++;
+
+    if(current >= popupImages.length){
+
+        current = 0;
+
+    }
+
+document.getElementById("popupImage")
+.src = popupImages[current];
+
+}, 3000);
+
     </script>
 </body>
 
