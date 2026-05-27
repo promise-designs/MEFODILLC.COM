@@ -28,7 +28,14 @@
     <link href="style.css" rel="stylesheet">
 
 <style>
+.scroll-top{
 
+    bottom:20px;
+    right:20px;
+
+    z-index:9999;
+
+}
 :root{
     --bs-primary:#ff8c00 !important;
 }
@@ -246,6 +253,33 @@ body{
     }
 
 }
+    .whatsapp-float{
+
+    position:fixed;
+
+    width:60px;
+    height:60px;
+
+    bottom:100px;
+    right:20px;
+
+    background:#25d366;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+
+    z-index:99999;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+    }
 </style>
 
 </head>
@@ -1868,26 +1902,25 @@ style="background:#0c1d3d;">
         <p style="color:#d7d7d7;">
             Get updates on new signage solutions and offers
         </p>
+<form action="subscribe.php"
+method="POST"
+class="newsletter-form">
 
-        <form class="row justify-content-center mt-4">
+    <input
+    type="email"
+    name="email"
+    placeholder="Enter Your Email"
+    required>
 
-            <div class="col-md-6">
+    <button
+    type="submit"
+    name="subscribe">
 
-                <input type="email"
-                class="form-control form-control-lg"
-                placeholder="Enter your email">
+    Subscribe
 
-            </div>
+    </button>
 
-            <div class="col-md-2 mt-3 mt-md-0">
-
-                <button type="submit" class="btn btn-primary w-100 btn-lg">
-                    Subscribe
-                </button>
-
-            </div>
-
-        </form>
+</form>
 
     </div>
 
@@ -2144,23 +2177,39 @@ method="POST">
     </div>
     
 <script>
-// ================= POPUP OPEN AFTER 1 MINUTES =================
 
-setTimeout(() => {
-
-document.getElementById("popupOverlay").style.display = "flex";
-
-}, 65000);
+document.addEventListener("DOMContentLoaded", function(){
 
 
 
-// ================= CLOSE POPUP =================
+// ================= POPUP =================
 
-function closePopup() {
+const popup =
+document.getElementById("popupOverlay");
 
-document.getElementById("popupOverlay").style.display = "none";
+
+
+function showPopup(){
+
+popup.style.display = "flex";
 
 }
+
+
+
+// SHOW AFTER 2 MINUTES 😭🔥
+
+setTimeout(showPopup, 70000);
+
+
+
+// CLOSE POPUP 😭🔥
+
+window.closePopup = function(){
+
+popup.style.display = "none";
+
+};
 
 
 
@@ -2170,15 +2219,24 @@ const popupImages = [
 
 "pop1.jpg",
 "pop2.jpg",
-"pop3.jpg",
+"pop3.jpg"
 
 ];
 
+
+
 let currentImage = 0;
 
-const sliderImage = document.getElementById("popupSliderImage");
 
-setInterval(() => {
+
+const sliderImage =
+document.getElementById("popupSliderImage");
+
+
+
+if(sliderImage){
+
+setInterval(()=>{
 
 currentImage++;
 
@@ -2188,80 +2246,89 @@ currentImage = 0;
 
 }
 
-sliderImage.src = popupImages[currentImage];
+sliderImage.src =
+popupImages[currentImage];
 
 }, 3000);
-
-
-
-// ================= FORM SUBMIT =================
-
-const popupForm = document.getElementById("popupForm");
-
-popupForm.addEventListener("submit", async function(e){
-
-e.preventDefault();
-
-
-
-// LOADING BUTTON 😭🔥
-
-const submitBtn = popupForm.querySelector("button");
-
-submitBtn.innerHTML = "Sending...";
-submitBtn.disabled = true;
-
-
-
-const formData = new FormData(popupForm);
-
-
-
-try{
-
-const response = await fetch("contact.php", {
-
-method: "POST",
-body: formData
-
-});
-
-
-
-const result = await response.text();
-
-
-
-// SUCCESS POPUP 😭🔥
-
-alert("Message sent successfully!");
-
-
-
-// RESET FORM 😭🔥
-
-popupForm.reset();
-
-
-
-// CLOSE POPUP 😭🔥
-
-document.getElementById("popupOverlay").style.display = "none";
-
-
-
-}catch(error){
-
-alert("Message failed. Please try again.");
 
 }
 
 
 
-// RESET BUTTON 😭🔥
+// ================= POPUP FORM =================
 
-submitBtn.innerHTML = "Send Request";
+const popupForm =
+document.getElementById("popupForm");
+
+
+
+if(popupForm){
+
+popupForm.addEventListener("submit",
+
+async function(e){
+
+e.preventDefault();
+
+
+
+const submitBtn =
+popupForm.querySelector("button");
+
+submitBtn.innerHTML =
+"Sending...";
+
+submitBtn.disabled = true;
+
+
+
+const formData =
+new FormData(popupForm);
+
+
+
+try{
+
+const response =
+await fetch("contact.php", {
+
+method:"POST",
+body:formData
+
+});
+
+
+
+alert("Message Sent Successfully!");
+
+
+
+popupForm.reset();
+
+
+
+popup.style.display = "none";
+
+
+
+}catch(error){
+
+alert("Failed To Send Message");
+
+}
+
+
+
+submitBtn.innerHTML =
+"Send Request";
+
 submitBtn.disabled = false;
+
+});
+
+}
+
+
 
 });
 
