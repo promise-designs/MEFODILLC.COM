@@ -951,15 +951,23 @@ background:#0c1d3d;
                 Get updates on new signage solutions and promotional offers.
             </p>
 
-            <form class="row justify-content-center">
+            <form action="subscribe.php"
+method="POST"
+class="newsletter-form">
 
-                <div class="col-md-6">
-                    <input type="email" class="form-control" placeholder="Enter your email">
-                </div>
+    <input
+    type="email"
+    name="email"
+    placeholder="Enter Your Email"
+    required>
 
-                <div class="col-md-2 mt-3 mt-md-0">
-                    <button type="submit">Subscribe</button>
-                </div>
+    <button
+    type="submit"
+    name="subscribe">
+
+    Subscribe
+
+    </button>
 
             </form>
 
